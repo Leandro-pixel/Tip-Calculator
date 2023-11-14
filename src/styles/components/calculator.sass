@@ -1,0 +1,70 @@
+@use '../variable'
+@use '../mixins'
+
+#calculator
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+    background: variable.$White
+    width: 30rem
+    padding: 1rem
+
+    #inputBill
+        background-image: url("../../images/icon-dollar.svg")
+        background-repeat: no-repeat
+        background-position: 1rem center
+        padding-right: 1rem
+        text-align: right
+        font-size: variable.$bodyfont-size
+        color: variable.$Verydark-cyan
+        
+    #inputPeople
+        background-image: url("../../images/icon-person.svg")     
+        background-repeat: no-repeat
+        background-position: 1rem center
+        padding-right: 1rem
+        text-align: right
+        font-size: variable.$bodyfont-size
+        color: variable.$Verydark-cyan
+
+    input:not(#customTip)
+        height: 3rem
+        width: 26rem
+        border-radius: .4rem
+        
+
+    label
+        display: flex
+        margin-bottom: .2rem
+        color: variable.$Darkgrayish-cyan
+
+        
+
+    #selectTip
+
+        label
+            margin-bottom: 1.4rem
+            margin-top: 2.5rem
+            
+
+        #tipBtns
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr 
+            gap: 1rem
+            margin-bottom: 2.5rem
+
+            .btn
+                @include mixins.tip-btn
+
+            #customTip
+                @include mixins.tip-btn
+                background: variable.$Verylightgrayish-cyan
+                color: variable.$Verydark-cyan
+                &::placeholder
+                    color: variable.$Darkgrayish-cyan
+            
+            
+
+        

@@ -1,9 +1,13 @@
-@use 'variable'
+@use './variable'
     
-@mixin my-btn
-    padding: 1rem 1.2rem
-    color: green
-    background: yellow
+@mixin tip-btn
+    padding: .4rem
+    color: variable.$White
+    background: variable.$Verydark-cyan
     text-decoration: none
-    border-radius: 3rem
+    border-radius: .5rem
+    font-size: variable.$bodyfont-size
+    width: 8rem
+    text-align: center
+    border: none
     cursor: pointer
