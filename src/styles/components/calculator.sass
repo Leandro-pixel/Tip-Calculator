@@ -18,8 +18,10 @@
         text-align: right
         font-size: variable.$bodyfont-size
         color: variable.$Verydark-cyan
+        &:focus
+            outline: 2px solid variable.$Strong-cyan
         
-    #inputPeople
+    .inputPeople
         background-image: url("../../images/icon-person.svg")     
         background-repeat: no-repeat
         background-position: 1rem center
@@ -27,6 +29,8 @@
         text-align: right
         font-size: variable.$bodyfont-size
         color: variable.$Verydark-cyan
+        &:focus
+            outline: 2px solid variable.$Strong-cyan
 
     input:not(#customTip)
         height: 3rem
@@ -39,31 +43,63 @@
         margin-bottom: .2rem
         color: variable.$Darkgrayish-cyan
 
-        
-
     #selectTip
 
         label
             margin-bottom: 1.4rem
-            margin-top: 2.5rem
-            
+            margin-top: 2.5rem   
 
         #tipBtns
             display: grid
             grid-template-columns: 1fr 1fr 1fr
             grid-template-rows: 1fr 1fr 
             gap: 1rem
-            margin-bottom: 2.5rem
+            margin-bottom: 2.5rem                
 
             .btn
                 @include mixins.tip-btn
 
-            #customTip
+            .clicked
                 @include mixins.tip-btn
+                background: variable.$Strong-cyan
+
+            #customTip
+                padding: .4rem
+                background: variable.$Verydark-cyan
+                text-decoration: none
+                border-radius: .5rem
+                font-size: variable.$bodyfont-size
+                width: 8rem
+                text-align: center
+                border: none
+                cursor: pointer
                 background: variable.$Verylightgrayish-cyan
                 color: variable.$Verydark-cyan
                 &::placeholder
                     color: variable.$Darkgrayish-cyan
+                &:focus
+                    outline: 2px solid variable.$Strong-cyan
+
+    .numberPeople
+        display: flex
+        justify-content: space-between
+        gap: 8rem
+
+        .error
+            color: red
+
+    .errorOutline
+        background-image: url("../../images/icon-person.svg")     
+        background-repeat: no-repeat
+        background-position: 1rem center
+        padding-right: 1rem
+        text-align: right
+        font-size: variable.$bodyfont-size
+        color: variable.$Verydark-cyan
+        outline: 2px solid red  
+       
+
+    
             
             
 
