@@ -9,6 +9,8 @@
     background: variable.$White
     width: 30rem
     padding: 1rem
+    @include mixins.xs
+        padding: 0
 
     #inputBill
         background-image: url("../../images/icon-dollar.svg")
@@ -36,6 +38,8 @@
         height: 3rem
         width: 26rem
         border-radius: .4rem
+        @include mixins.xs
+            width: 30rem
         
 
     label
@@ -54,14 +58,23 @@
             grid-template-columns: 1fr 1fr 1fr
             grid-template-rows: 1fr 1fr 
             gap: 1rem
-            margin-bottom: 2.5rem                
+            margin-bottom: 2.5rem
+            @include mixins.xs
+                width: 30rem  
+                grid-template-columns: 1fr 1fr               
 
             .btn
                 @include mixins.tip-btn
+                @include mixins.xs
+                    width: 14rem
+                    height: 4rem
 
             .clicked
                 @include mixins.tip-btn
                 background: variable.$Strong-cyan
+                @include mixins.xs
+                    width: 14rem
+                    height: 4rem
 
             #customTip
                 padding: .4rem
@@ -79,6 +92,9 @@
                     color: variable.$Darkgrayish-cyan
                 &:focus
                     outline: 2px solid variable.$Strong-cyan
+                @include mixins.xs
+                        width: 14rem
+                        height: 4rem    
 
     .numberPeople
         display: flex

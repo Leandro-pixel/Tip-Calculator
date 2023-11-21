@@ -67,10 +67,10 @@ const Calculator = () => {
 
           if(numPeople > 0 && numBill > 0) {
             resultTotal = numBill / numPeople
-            setResultTotal(resultTotal);
+            setResultTotal(resultTotal.toFixed(2));
             if(numPercent > 0) {
               resultTip = resultTotal * numPercent / 100
-              setResultTip(resultTip);
+              setResultTip(resultTip.toFixed(2));
             }
           }
   

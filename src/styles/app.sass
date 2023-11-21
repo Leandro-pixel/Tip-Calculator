@@ -1,4 +1,5 @@
 @use './variable'
+@use './mixins'
 
 
 *
@@ -16,9 +17,14 @@
     text-align: center
     background: variable.$Lightgrayish-cyan
     padding: 15%
+    @include mixins.xs
+        padding: 0
+        
 
     img
         margin-bottom: 6rem
+        @include mixins.xs
+            margin-top: 6rem
 
 main
     display: flex
@@ -27,6 +33,16 @@ main
     border-radius: 1.2rem
     justify-content: space-between
     width: auto
+    @include mixins.xs
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 3rem
+        padding: 3rem 0
+        border-bottom-left-radius: 0 
+        border-bottom-right-radius: 0 
+       
 
+    
     
    

@@ -1,4 +1,5 @@
 @use '../variable'
+@use '../mixins'
 
 #tipWrapper
     background: variable.$Verydark-cyan
@@ -8,6 +9,8 @@
     flex-direction: column
     width: 30rem
     gap: 1.5rem
+    
+    
 
     #resetBtn
         margin-top: 5rem
@@ -43,5 +46,7 @@
         #total
             color: variable.$Strong-cyan
             font-size: 4rem
+            max-width: 14.5rem
+            overflow: auto
         
         
