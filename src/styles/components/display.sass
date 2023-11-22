@@ -7,7 +7,7 @@
     padding: 2rem 3rem
     display: flex
     flex-direction: column
-    width: 30rem
+    width: 20rem
     gap: 1.5rem
     
     
@@ -23,6 +23,8 @@
         cursor: pointer
         &:hover
             background: variable.$Strong-cyan
+        @include mixins.xs
+            margin-top: 1rem      
 
     #valor
         display: flex
@@ -48,5 +50,8 @@
             font-size: 4rem
             max-width: 14.5rem
             overflow: auto
+            @include mixins.xs
+                font-size: 2rem
+                width: auto
         
         
